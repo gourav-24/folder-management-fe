@@ -1,0 +1,9 @@
+/* styles.css */
+.hover-sidebar-element-effect {
+    @apply hover:text-gray-900 hover:bg-lime-400 hover:rounded-md;
+  }
+
+.sidebar-elements{
+    @apply flex items-center py-2 text-gray-400 hover:text-gray-200 cursor-pointer px-2;
+}
+  
