@@ -40,7 +40,6 @@ const SearchInput = () => {
             results?.map((result:TreeNode) => (
               <li key={result?.id}               
                 className="p-2 hover:bg-gray-100 cursor-pointer"
-                //@ts-ignore
                 onClick={()=> {handleOptionClick(result?.id)}}
               >
                 {result?.name}

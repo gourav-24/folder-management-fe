@@ -23,7 +23,7 @@ const FileTree: React.FC = () => {
   const [expandAll, setExpandAll] = useState(false);
   const [collapseAll, setCollapseAll] = useState(false);
 
-  const handleFolderAddClick = (e:any)=>{
+  const handleFolderAddClick = ()=>{
     dispatch(updateDefaultDataInForm({
       id:uuidv4(),
       name:'',

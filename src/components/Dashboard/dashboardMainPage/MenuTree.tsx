@@ -9,7 +9,6 @@ import SearchInput from "../SearchBar/searchBar";
 
 
 const MenuTree = () => {
-  //@ts-ignore
   const {menuForm, expanded} = useSelector((state: RootState)=> state.menuFormData);
 
   return (
