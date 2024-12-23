@@ -62,7 +62,7 @@ const FileTree: React.FC = () => {
           Collapse All
         </button>
           <button
-            onClick={(e) => handleFolderAddClick(e)}
+            onClick={(e) => handleFolderAddClick()}
             className="ml-2 p-1 text-white bg-blue-500 rounded-full hover:bg-blue-600 text-base flex items-center justify-center"
           >
             <FiPlus />
