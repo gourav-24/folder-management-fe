@@ -38,7 +38,7 @@ const FileTreeNode: React.FC<FileTreeNodeProps> = ({
     return (
       <div
         className="ml-4 relative"
-        onMouseEnter={(e) => setIsHovered(true)}
+        onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => {
           setIsHovered(false);
         }}
