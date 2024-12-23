@@ -17,7 +17,7 @@ const FileTree: React.FC = () => {
   // fetch folders
   useEffect(()=>{
     dispatch(fetchFoldersRequest(null));
-  },[]);
+  },[dispatch]);
   
 
   const [expandAll, setExpandAll] = useState(false);
