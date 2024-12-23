@@ -12,10 +12,12 @@ import {
   deleteFolderFailure,
 } from "../reducers/folderSlice";
 
-const API_URL = "http://localhost:8000/folders";
+const API_URL = `${process.env.BACKEND_API}/folders`;
 
 function* fetchFolders(action:ReturnType<typeof fetchFoldersRequest>) {
   try {
+    console.log("API_URL============== ", API_URL);
+    console.log("process.env.BACKEND_API============== ", process.env.BACKEND_API);
     let url = API_URL;
     if(action.payload){
       url+=`/${action.payload}`;

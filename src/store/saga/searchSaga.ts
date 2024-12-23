@@ -2,7 +2,7 @@ import { takeLatest, call, put, delay } from "redux-saga/effects";
 import { fetchResultsStart, fetchResultsSuccess, fetchResultsFailure, setQuery } from "../reducers/searchSlice";
 import axios from "axios";
 
-const API_URL = "http://localhost:8000/folders";
+const API_URL = `${process.env.BACKEND_API}/folders`;
 
 
 //@ts-ignore
