@@ -1,6 +1,6 @@
 // File: app/page.js
-import Sidebar from "../components/Sidebar";
-import MenuTree from "@/components/MenuTree";
+import Sidebar from "../components/Dashboard/SideBar/Sidebar";
+import MenuTree from "../components/Dashboard/dashboardMainPage/MenuTree";
 export default function Dashboard() {
   return (
     <div className="flex h-screen">

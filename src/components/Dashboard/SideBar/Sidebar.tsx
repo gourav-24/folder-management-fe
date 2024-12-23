@@ -1,12 +1,11 @@
-// // components/Sidebar.tsx
 "use client";
 import React from "react";
-import "../styles/sidebarCustomStyles.css";
+import "../../../styles/sidebarCustomStyles.css";
 import { FiMenu, FiFolder, FiGrid } from "react-icons/fi";
 
 const Sidebar: React.FC = () => {
   return (
-    <div className="bg-gray-900 text-white w-64 h-5/6 flex flex-col rounded-3xl mx-5 mt-5">
+    <div className="bg-gray-900 text-white w-64 h-5/6 hidden md:flex flex-col rounded-3xl mx-5 mt-5 ">
       {/* Logo */}
       <div className="flex items-center justify-between px-4 py-3 border-b border-gray-800">
         <span className="text-xl font-bold">CLOIT</span>

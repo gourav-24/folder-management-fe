@@ -37,10 +37,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 "First commit"
 
 
-## First create FileTreeNode (Uniquely identified by each )
-1) Display Its name 
-2) Its immediate Child Nodes
-3) Plus icon that enters data to form
-4) Drop icon to expand and collapse immediate child
-5) expand and collapse all check
+## Flow 
+No folder exist under menu 
+1) create one using plus icon beside Menu
 
