@@ -1,7 +1,7 @@
-import React, { useState, useCallback } from "react";
+import React, { useState } from "react";
 import { FiPlus, FiChevronRight, FiChevronDown, FiMinus } from "react-icons/fi";
 import { v4 as uuidv4 } from 'uuid';
-import { FileTreeNodeProps, TreeNode } from "./utils/fileTreeInterface";
+import { FileTreeNodeProps } from "./utils/fileTreeInterface";
 import { useDispatch } from "react-redux";
 import { updateDefaultDataInForm } from "@/store/reducers/menuFormSlice";
 import { deleteFolderRequest } from "@/store/reducers/folderSlice";
@@ -14,11 +14,11 @@ const FileTreeNode: React.FC<FileTreeNodeProps> = ({
     const dispatch = useDispatch();
     const [isExpanded, setIsExpanded] = useState(false);
     const [isHovered, setIsHovered] = useState(false); // Track hover state for this node only
-    const handleFolderDeleteClick = (e:any)=>{
+    const handleFolderDeleteClick = ()=>{
       dispatch(deleteFolderRequest(node?.id));
 
     }
-    const handleFolderAddClick = (e:any)=>{
+    const handleFolderAddClick = ()=>{
       dispatch(updateDefaultDataInForm({
         id:uuidv4(),
         name:'',
@@ -74,13 +74,13 @@ const FileTreeNode: React.FC<FileTreeNodeProps> = ({
           {isHovered && (
               <div className=" flex">
                 <button
-                onClick={(e) => handleFolderAddClick(e)}
+                onClick={ handleFolderAddClick}
                 className="ml-2 p-1 text-white bg-blue-500 rounded-full hover:bg-blue-600 text-base flex items-center justify-center"
               >
                 <FiPlus />
               </button>
               <button
-                onClick={(e) => handleFolderDeleteClick(e)}
+                onClick={handleFolderDeleteClick}
                 className="ml-2 p-1 text-white bg-red-500 rounded-full hover:bg-red-600 text-base flex items-center justify-center"
               >
                 <FiMinus />

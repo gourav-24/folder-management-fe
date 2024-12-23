@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { v4 as uuidv4 } from 'uuid';
 import { RootState } from "@/store/store";
 import { FiPlus } from "react-icons/fi";
-import { TreeNode } from "./utils/fileTreeInterface";
 import FileTreeNode from "./FileTreeNode";
 import { fetchFoldersRequest } from "@/store/reducers/folderSlice";
 import { updateDefaultDataInForm } from "@/store/reducers/menuFormSlice";
@@ -12,7 +11,7 @@ import { updateDefaultDataInForm } from "@/store/reducers/menuFormSlice";
 
 const FileTree: React.FC = () => {
   const dispatch = useDispatch();
-  const { folders, loading, error } = useSelector((state: RootState) => state.folder);
+  const { folders } = useSelector((state: RootState) => state.folder);
   
   // fetch folders
   useEffect(()=>{
@@ -62,7 +61,7 @@ const FileTree: React.FC = () => {
           Collapse All
         </button>
           <button
-            onClick={(e) => handleFolderAddClick()}
+            onClick={handleFolderAddClick}
             className="ml-2 p-1 text-white bg-blue-500 rounded-full hover:bg-blue-600 text-base flex items-center justify-center"
           >
             <FiPlus />

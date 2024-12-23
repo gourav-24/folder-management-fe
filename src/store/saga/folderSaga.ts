@@ -22,19 +22,21 @@ function* fetchFolders(action:ReturnType<typeof fetchFoldersRequest>) {
     if(action.payload){
       url+=`/${action.payload}`;
     }
-    //@ts-expect-error
+    //@ts-expect-error description
     const response = yield call(axios.get, url);
     yield put(fetchFoldersSuccess(response.data));
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (error: any) {
-    yield put(fetchFoldersFailure(error.message));
+    yield put(fetchFoldersFailure(error.mesage));
   }
 }
 
 function* addFolder(action: ReturnType<typeof addFolderRequest>) {
   try {
-    //@ts-expect-error
+    //@ts-expect-error description
     const response = yield call(axios.post, API_URL, action.payload);
     yield put(addFolderSuccess(response.data));
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (error: any) {
     yield put(addFolderFailure(error.message));
   }
@@ -44,6 +46,7 @@ function* deleteFolder(action: ReturnType<typeof deleteFolderRequest>) {
   try {
     yield call(axios.delete, `${API_URL}/${action.payload}`);
     yield put(deleteFolderSuccess(action.payload));
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (error: any) {
     yield put(deleteFolderFailure(error.message));
   }
@@ -55,4 +58,3 @@ export default function* folderSaga() {
   yield takeLatest(deleteFolderRequest.type, deleteFolder);
 }
 
-// 1 virtual tech (basic questions).

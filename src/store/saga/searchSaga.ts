@@ -5,7 +5,7 @@ import axios from "axios";
 const API_URL = `${process.env.BACKEND_API}/folders`;
 
 
-//@ts-expect-error
+//@ts-expect-error description
 function* handleSearch(action) {
   try {
     const query = action.payload;
@@ -20,11 +20,11 @@ function* handleSearch(action) {
 
     yield put(fetchResultsStart());
 
-    //@ts-expect-error
+    //@ts-expect-error description
     const response = yield call(axios.get, `${API_URL}?name=${query}`);
     yield put(fetchResultsSuccess(response.data));
   } catch (error) {
-    //@ts-expect-error
+    //@ts-expect-error description
     yield put(fetchResultsFailure(error?.message));
   }
 }

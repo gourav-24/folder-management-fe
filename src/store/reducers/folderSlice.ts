@@ -18,6 +18,7 @@ const folderSlice = createSlice({
   initialState,
   reducers: {
     fetchFoldersRequest(state,action) {
+      console.log(action)
       state.loading = true;
       state.error = null;
     },
@@ -30,6 +31,7 @@ const folderSlice = createSlice({
       state.error = action.payload;
     },
     addFolderRequest(state, action: PayloadAction<TreeNode>) {
+      console.log(action)
       state.loading = true;
     },
     addFolderSuccess(state, action: PayloadAction<TreeNode[]>) {
@@ -42,6 +44,7 @@ const folderSlice = createSlice({
       state.error = action.payload;
     },
     deleteFolderRequest(state, action: PayloadAction<string>) {
+      console.log(action)
       state.loading = true;
     },
     deleteFolderSuccess(state, action: PayloadAction<string>) {

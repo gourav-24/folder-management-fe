@@ -1,7 +1,7 @@
 "use client";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import { RootState } from "../../../store/store";
-import { FiFolder, FiFileText, FiPlus, FiGrid } from "react-icons/fi";
+import { FiFolder, FiGrid } from "react-icons/fi";
 import FileTree from "../FileTree/FileTree";
 import MenuForm from "../FileForm/FileForm";
 import SearchInput from "../SearchBar/searchBar";
